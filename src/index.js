@@ -40,7 +40,7 @@ shuffle(capitals);
 var index;
 var opened = [];
 var stack = [];
-var completed = [];
+var completed = {};
 
 var cards = document.getElementsByTagName('td');
 
@@ -83,7 +83,7 @@ for (var i = 0; i < cards.length; i++) {
                 stack.shift();
             }
 
-            if (completed.length === capitals.length) {
+            if (Object.keys(completed).length === capitals.length) {
                 alert('You won!');
             }
         }
